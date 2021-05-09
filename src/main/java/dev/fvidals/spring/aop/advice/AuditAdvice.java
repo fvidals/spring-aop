@@ -14,7 +14,7 @@ public class AuditAdvice {
     private static final Logger logger = LoggerFactory.getLogger(AuditAdvice.class);
 
     @Before("@annotation(audit)")
-    public void audit(JoinPoint joinPoint, Audit audit) throws Throwable {
+    public void audit(JoinPoint joinPoint, Audit audit) {
         if (!audit.isEnabled()) {
             return;
         }
