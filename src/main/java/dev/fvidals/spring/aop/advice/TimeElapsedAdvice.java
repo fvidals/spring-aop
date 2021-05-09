@@ -29,6 +29,6 @@ public class TimeElapsedAdvice {
 
         logger.info(String.format("AspectJ timeElapsed: %s %dms", joinPoint.getSignature().getName(), diff));
 
-        return joinPoint.proceed();
+        return result;
     }
 }
